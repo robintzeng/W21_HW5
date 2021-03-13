@@ -88,7 +88,7 @@ class TestCard(unittest.TestCase):
     def test_q4(self):
         '''
         1. fill in your test method for question 4:
-        Test that if you create a eck instance, it will have 52 cards in its cards instance variable
+        Test that if you create a deck instance, it will have 52 cards in its cards instance variable
 
         2. remove the pass command
 
@@ -151,10 +151,13 @@ class TestCard(unittest.TestCase):
 
         '''
         test_deck = hw5_cards.Deck()
+
         tmp_card = test_deck.deal_card()
         card_num1 = len(test_deck.cards)
+
         test_deck.replace_card(tmp_card)
         card_num2 = len(test_deck.cards)
+
         X = card_num2 - card_num1
         Y = 1
         self.assertEqual(X, Y)
@@ -175,8 +178,10 @@ class TestCard(unittest.TestCase):
 
         '''
         test_deck = hw5_cards.Deck()
+
         num_card1 = len(test_deck.cards)
         test_card = hw5_cards.Card(suit=3, rank=13)
+
         test_deck.replace_card(test_card)
         num_card2 = len(test_deck.cards)
 
